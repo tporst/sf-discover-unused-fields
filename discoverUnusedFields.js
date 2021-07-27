@@ -62,7 +62,7 @@ if (!fs.existsSync(dir)){
 
 if(argv.org){
     console.log(``);
-    console.log(`...discovering unused fields`);
+    console.log(colors.yellow(`Discovering unused fields... It might take some time.`));
     console.log(``);
     for(obj of sObjects){
         executeApex(argv.org, obj.trim());
