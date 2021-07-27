@@ -1,4 +1,5 @@
 #Node specific
 node_modules/
+tmp/
 
 
