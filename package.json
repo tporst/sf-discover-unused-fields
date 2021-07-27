@@ -1,0 +1,23 @@
+{
+  "name": "discover unused fields",
+  "version": "0.1.0",
+  "description": "data cleansing",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/XXXXXXXX"
+  },
+  "keywords": [
+    "salesforce",
+    "data cleansing"
+  ],
+  "author": "Tomasz Porst",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/XXXXXXXXXXXX/src/master/README.md",
+  "dependencies": {
+    "yargs": "^17.0.1"
+  }
+}
