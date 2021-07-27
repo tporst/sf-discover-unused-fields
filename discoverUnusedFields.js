@@ -1,4 +1,5 @@
 let yargs = require('yargs');
+const colors = require('colors');
 const { promisify } = require('util');
 const exec = promisify(require('child_process').exec);
 const fs = require('fs');
@@ -20,21 +21,21 @@ executeApex = async (org, obj) => {
         console.log(``);
         return result
       };
-
+//colors.bold.bgRed.
 prettify = (input, obj)=>{
     let lines = input.split(/\r\n|\n\r|\n|\r/);
     let filteredLines = lines.filter(line=>line.includes("|USER_DEBUG|"));
     console.log(``);
-    console.log(`${obj} =>`);
+    console.log(colors.bold.bgBlue(` ${obj} `));
     console.log(``);
     let c=0;
     filteredLines.forEach(line=>{
 
         let lineSplit = line.split('|DEBUG|');
         if(lineSplit[1])c++;
-        console.log('                           '+lineSplit[1]);
+        console.log(colors.green('                           '+lineSplit[1]));
     });
-    if(c==0)console.log('                           all fields are used');
+    if(c==0)console.log(colors.bold.red('                           all fields are used'));
 }
 
 prepareApexScript =  (obj) =>{

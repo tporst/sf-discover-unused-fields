@@ -36,7 +36,8 @@ for(sObject record :  sobjRecordList ){
 //print only custom fields
 for(string fieldApi: result.keySet()){
     if(result.get(fieldApi)==0 && fieldApi.endsWith('__c'))
-    System.debug(fieldApi + ' : ' +result.get(fieldApi));
+    //System.debug(fieldApi + ' : ' +result.get(fieldApi));
+    System.debug(fieldApi);
 }
 
 
