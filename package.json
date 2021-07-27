@@ -8,7 +8,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/XXXXXXXX"
+    "url": "git+https://github.com/tporst/sf-discover-unused-fields"
   },
   "keywords": [
     "salesforce",
@@ -16,7 +16,7 @@
   ],
   "author": "Tomasz Porst",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/XXXXXXXXXXXX/src/master/README.md",
+  "homepage": "https://github.com/tporst/sf-discover-unused-fields/blob/main/README.md",
   "dependencies": {
     "yargs": "^17.0.1"
   }
