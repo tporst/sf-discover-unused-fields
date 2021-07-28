@@ -22,18 +22,29 @@ executeApex = async (org, obj) => {
 //colors.bold.bgRed.
 prettify = (input, obj)=>{
     let lines = input.split(/\r\n|\n\r|\n|\r/);
-    let filteredLines = lines.filter(line=>line.includes("|USER_DEBUG|"));
+    let filteredFieldLines = lines.filter(line=>line.includes("|DEBUG|unused field:"));
+    let filteredCounterLines = lines.filter(line=>line.includes("|DEBUG|all fields counter:"));
     console.log(``);
     console.log(colors.bold.bgBlue(` ${obj} `));
     console.log(``);
     let c=0;
-    filteredLines.forEach(line=>{
 
-        let lineSplit = line.split('|DEBUG|');
-        if(lineSplit[1])c++;
-        console.log(colors.green('                           '+lineSplit[1]));
+    filteredFieldLines.forEach(line=>{
+        let lineSplit = line.split('|DEBUG|unused field:');
+        if(lineSplit[1]){
+            c++;
+            console.log(colors.green('                           '+lineSplit[1]));
+        }
     });
-    if(c==0)console.log(colors.bold.red('                           all fields are used'));
+
+    if(c==0){
+        console.log(colors.bold.red('                           all fields are used'));
+    }
+    else{
+        console.log('');
+        console.log(colors.bold.yellow(`                           unused fields in total: ${c}`));
+        console.log(colors.bold.yellow(`                           fields in total: ${filteredCounterLines[0].split('|DEBUG|all fields counter:')[1]}`));
+    }
 }
 
 prepareApexScript =  (obj) =>{

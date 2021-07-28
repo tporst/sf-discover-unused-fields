@@ -37,9 +37,10 @@ for(sObject record :  sobjRecordList ){
 for(string fieldApi: result.keySet()){
     if(result.get(fieldApi)==0 && fieldApi.endsWith('__c'))
     //System.debug(fieldApi + ' : ' +result.get(fieldApi));
-    System.debug(fieldApi);
+    System.debug('unused field:'+fieldApi);
 }
 
+System.debug('all fields counter:'+result.keySet().size());
 
 
 
